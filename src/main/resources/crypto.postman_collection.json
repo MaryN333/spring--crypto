@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "8d5caaf7-69e2-4466-9512-3a0320e79c9c",
+		"name": "crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28648182"
+	},
+	"item": [
+		{
+			"name": "add crypto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Avalanche\",\n  \"symbol\": \"AVAX\",\n  \"price\": 42.00,\n  \"quantity\": 10\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cryptos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add cryptos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Bitcoin\",\n        \"symbol\": \"BTC\",\n        \"price\": 60000.0,\n        \"quantity\": 0.5\n    },\n    {\n        \"name\": \"Ethereum\",\n        \"symbol\": \"ETH\",\n        \"price\": 3500.0,\n        \"quantity\": 0.5\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cryptos/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cryptos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cryptos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sorted by quantity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cryptos?sort=quantity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "quantity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sorted by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cryptos?sort=name",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sorted by price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cryptos?sort=price",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get crypto by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cryptos/3babba8d-1d80-4d3f-9813-7eba3c22d4b9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos",
+						"3babba8d-1d80-4d3f-9813-7eba3c22d4b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update crypto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Avalanche\",\n  \"symbol\": \"AVAX\",\n  \"price\": 42.00,\n  \"quantity\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cryptos/3babba8d-1d80-4d3f-9813-7eba3c22d4b9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cryptos",
+						"3babba8d-1d80-4d3f-9813-7eba3c22d4b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get portfolio value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/portfolio-value",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"portfolio-value"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
